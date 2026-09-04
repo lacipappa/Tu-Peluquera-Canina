@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tu Peluquería Canina demo – a weboldalon használt Unsplash képek részletes forrásadatai.">
+  <title>Tu Peluquería Canina – Képforrások</title>
+  <style>
+    :root{
+      --ink:#2f2a25;--muted:#71685f;--paper:#f6f0e8;--card:#fffdf9;
+      --accent:#a6633d;--accent-dark:#78442b;--line:#e5d9cc;--soft:#efe5da;
+      --shadow:0 18px 50px rgba(68,48,34,.11);--radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
+    a{color:inherit}
+    .container{width:min(1160px,calc(100% - 40px));margin:0 auto}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(246,240,232,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(229,217,204,.9)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{text-decoration:none;font-size:1.28rem;font-weight:900;letter-spacing:-.03em}
+    .logo span{color:var(--accent)}
+    .back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;color:var(--accent-dark);padding:11px 16px;border:1px solid var(--line);border-radius:999px;background:#fffaf5}
+    .back:hover{transform:translateY(-1px)}
+    .hero{padding:78px 0 64px;background:linear-gradient(135deg,#3c2a20 0%,#72503b 60%,#a6633d 100%);color:white;overflow:hidden;position:relative}
+    .hero:after{content:"🐾";position:absolute;right:6vw;top:18px;font-size:170px;opacity:.07;transform:rotate(-12deg)}
+    .eyebrow{display:inline-block;font-size:.76rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#dfb795;margin-bottom:14px}
+    h1{font-size:clamp(2.35rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.055em;margin:0 0 20px;max-width:850px}
+    .hero p{max-width:840px;margin:0;color:#f7e9dc;font-size:1.05rem}
+    .hero-note{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+    .pill{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;font-size:.88rem}
+    main{padding:58px 0 72px}
+    .intro{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start;margin-bottom:34px}
+    .intro-card,.license-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+    .intro-card h2,.license-card h2{margin:0 0 10px;font-size:1.35rem}
+    .intro-card p,.license-card p{margin:0;color:var(--muted)}
+    .license-card a{color:var(--accent-dark);font-weight:800}
+    .source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+    .source-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .source-card img{display:block;width:100%;height:300px;object-fit:cover;background:var(--soft)}
+    .source-body{padding:24px}
+    .source-number{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--soft);color:var(--accent-dark);font-weight:900;margin-bottom:14px}
+    .source-body h2{margin:0 0 4px;font-size:1.42rem;line-height:1.2}
+    .source-sub{margin:0 0 18px;color:var(--muted);font-weight:650}
+    .meta{display:grid;gap:9px;margin:18px 0 20px;padding-top:17px;border-top:1px solid var(--line)}
+    .meta-row{display:grid;grid-template-columns:145px minmax(0,1fr);gap:12px;font-size:.93rem;align-items:start}
+    .meta-row strong{color:var(--ink)}
+    .meta-row span,.meta-row a{color:var(--muted);overflow-wrap:anywhere}
+    .meta-row a:hover{color:var(--accent-dark)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:850;border-radius:999px;padding:11px 15px;border:1px solid var(--line)}
+    .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .btn-light{background:#fffaf5;color:var(--accent-dark)}
+    .note{margin-top:36px;background:#3b2b22;color:#f7eee6;border-radius:var(--radius);padding:28px}
+    .note strong{color:#fff}.note p{margin:5px 0 0;color:#e3d5ca}
+    footer{border-top:1px solid var(--line);padding:28px 0 38px;color:var(--muted)}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.9rem;align-items:center}.source-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.source-lang{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.source-lang button{border:1px solid var(--line);background:#fffaf5;color:var(--ink);border-radius:999px;padding:7px 10px;font-weight:800;cursor:pointer}.source-lang button.active{background:var(--accent);border-color:var(--accent);color:#fff}
+    @media(max-width:820px){.intro,.source-grid{grid-template-columns:1fr}.hero{padding:58px 0 50px}.source-card img{height:250px}}
+    @media(max-width:560px){.container{width:min(100% - 24px,1160px)}.nav{min-height:68px}.back{padding:9px 12px;font-size:.87rem}.hero:after{display:none}.source-card img{height:220px}.meta-row{grid-template-columns:1fr;gap:1px}.source-body{padding:20px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="logo" href="./">🐾 Tu <span>Peluquería Canina</span></a>
+      <div class="source-actions"><a class="back" href="./" data-i18n="src_back">← Vissza a főoldalra</a><div class="source-lang"><span data-i18n="src_lang">Nyelv</span><button type="button" data-lang="hu">HU</button><button type="button" data-lang="en">EN</button><button type="button" data-lang="es">ES</button></div></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow" data-i18n="src_eye">KÉPFORRÁSOK · UNSPLASH</span>
+      <h1 data-i18n="src_title">Képforrások és fotósok</h1>
+      <p data-i18n="src_intro">A Tu Peluquería Canina demóban használt képek nyilvános és részletes forráslistája.</p>
+      <div class="hero-note">
+        <span class="pill" data-i18n="src_source_pill">Forrás: Unsplash</span>
+        <span class="pill" data-i18n="src_license_pill">Licenc: Unsplash License</span>
+        <span class="pill" data-i18n="src_demo_pill">Demo / illusztrációs felhasználás</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <div class="intro">
+        <section class="intro-card">
+          <h2 data-i18n="src_usage_title">A képek felhasználása</h2>
+          <p data-i18n="src_usage_text">A képek a demó vizuális bemutatását szolgálják. Éles ügyféloldalon minden kép saját ügyfélfotóra vagy az ügyfél által jóváhagyott képre cserélhető. Az alábbi kártyák a demóban ténylegesen használt egyedi Unsplash CDN-képeket sorolják fel. A főoldal nem tárol külön helyi galériaképeket: a képek közvetlenül az Unsplash rendszeréből töltődnek be.</p>
+        </section>
+        <aside class="license-card">
+          <h2 data-i18n="src_license_title">Unsplash licenc</h2>
+          <p data-i18n="src_license_text">A képek forrása az Unsplash. Az aktuális licencfeltételek az Unsplash hivatalos licencoldalán ellenőrizhetők.</p>
+          <p style="margin-top:12px"><a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License →</a></p>
+        </aside>
+      </div>
+
+      <section class="source-grid">
+        <article class="source-card">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1400&q=88" alt="Kutya – Tu Peluquería Canina hero és bemutatkozás">
+          <div class="source-body"><span class="source-number">01</span><h2 data-i18n="src_card1_title">Hero / Bemutatkozás</h2><p class="source-sub">Dog portrait · Tu Peluquería Canina</p>
+            <div class="meta">
+              <div class="meta-row"><strong data-i18n="src_photographer">Fotós</strong><span>Pauline Loroy</span></div>
+              <div class="meta-row"><strong data-i18n="src_source">Forrás</strong><span>Unsplash</span></div>
+              <div class="meta-row"><strong data-i18n="src_image_id">Képazonosító</strong><span>photo-1587300003388-59208cc962cb</span></div>
+              <div class="meta-row"><strong data-i18n="src_usage">Felhasználás</strong><span data-i18n="src_card1_use">Hero, bemutatkozó kép és galéria</span></div>
+              <div class="meta-row"><strong data-i18n="src_license">Licenc</strong><a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a></div>
+              <div class="meta-row"><strong data-i18n="src_direct">Közvetlen kép</strong><a href="https://images.unsplash.com/photo-1587300003388-59208cc962cb" target="_blank" rel="noopener noreferrer">images.unsplash.com →</a></div>
+            </div>
+            <div class="actions"><a class="btn btn-primary" href="https://unsplash.com/@paulinel" target="_blank" rel="noopener noreferrer"><span data-i18n="src_photographer_btn">Fotós az Unsplashen →</span></a><a class="btn btn-light" href="https://unsplash.com/s/photos/dog" target="_blank" rel="noopener noreferrer"><span data-i18n="src_unsplash_btn">Unsplash forrás →</span></a></div>
+          </div>
+        </article>
+
+        <article class="source-card">
+          <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1400&q=88" alt="Golden retriever – előtte kép és galéria">
+          <div class="source-body"><span class="source-number">02</span><h2 data-i18n="src_card2_title">Előtte / Galéria</h2><p class="source-sub">Golden retriever · demo image</p>
+            <div class="meta">
+              <div class="meta-row"><strong data-i18n="src_source">Forrás</strong><span>Unsplash</span></div>
+              <div class="meta-row"><strong data-i18n="src_image_id">Képazonosító</strong><span>photo-1552053831-71594a27632d</span></div>
+              <div class="meta-row"><strong data-i18n="src_usage">Felhasználás</strong><span data-i18n="src_card2_use">„Előtte” kép és galéria</span></div>
+              <div class="meta-row"><strong data-i18n="src_license">Licenc</strong><a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a></div>
+              <div class="meta-row"><strong data-i18n="src_direct">Közvetlen kép</strong><a href="https://images.unsplash.com/photo-1552053831-71594a27632d" target="_blank" rel="noopener noreferrer">images.unsplash.com →</a></div>
+            </div>
+            <div class="actions"><a class="btn btn-primary" href="https://unsplash.com/s/photos/golden-retriever" target="_blank" rel="noopener noreferrer"><span data-i18n="src_unsplash_btn">Unsplash forrás →</span></a></div>
+          </div>
+        </article>
+
+        <article class="source-card">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1400&q=88" alt="Kutya – galéria">
+          <div class="source-body"><span class="source-number">03</span><h2 data-i18n="src_gallery">Galéria</h2><p class="source-sub">Dog portrait · demo gallery</p>
+            <div class="meta">
+              <div class="meta-row"><strong data-i18n="src_source">Forrás</strong><span>Unsplash</span></div>
+              <div class="meta-row"><strong data-i18n="src_image_id">Képazonosító</strong><span>photo-1517849845537-4d257902454a</span></div>
+              <div class="meta-row"><strong data-i18n="src_usage">Felhasználás</strong><span data-i18n="src_gallery_use">Tu Peluquería Canina galéria</span></div>
+              <div class="meta-row"><strong data-i18n="src_license">Licenc</strong><a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a></div>
+              <div class="meta-row"><strong data-i18n="src_direct">Közvetlen kép</strong><a href="https://images.unsplash.com/photo-1517849845537-4d257902454a" target="_blank" rel="noopener noreferrer">images.unsplash.com →</a></div>
+            </div>
+            <div class="actions"><a class="btn btn-primary" href="https://unsplash.com/s/photos/dog-portrait" target="_blank" rel="noopener noreferrer"><span data-i18n="src_unsplash_btn">Unsplash forrás →</span></a></div>
+          </div>
+        </article>
+
+        <article class="source-card">
+          <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=1400&q=88" alt="Kutya – galéria">
+          <div class="source-body"><span class="source-number">04</span><h2 data-i18n="src_gallery">Galéria</h2><p class="source-sub">Dog outdoors · demo gallery</p>
+            <div class="meta">
+              <div class="meta-row"><strong data-i18n="src_photographer">Fotós</strong><span>Victor Grabarczyk</span></div>
+              <div class="meta-row"><strong data-i18n="src_source">Forrás</strong><span>Unsplash</span></div>
+              <div class="meta-row"><strong data-i18n="src_image_id">Képazonosító</strong><span>photo-1561037404-61cd46aa615b</span></div>
+              <div class="meta-row"><strong data-i18n="src_usage">Felhasználás</strong><span data-i18n="src_gallery_use">Tu Peluquería Canina galéria</span></div>
+              <div class="meta-row"><strong data-i18n="src_license">Licenc</strong><a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a></div>
+              <div class="meta-row"><strong data-i18n="src_direct">Közvetlen kép</strong><a href="https://images.unsplash.com/photo-1561037404-61cd46aa615b" target="_blank" rel="noopener noreferrer">images.unsplash.com →</a></div>
+            </div>
+            <div class="actions"><a class="btn btn-primary" href="https://unsplash.com/s/photos/dog-outdoors" target="_blank" rel="noopener noreferrer"><span data-i18n="src_unsplash_btn">Unsplash forrás →</span></a></div>
+          </div>
+        </article>
+
+        <article class="source-card">
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1400&q=88" alt="Két kutya – galéria">
+          <div class="source-body"><span class="source-number">05</span><h2 data-i18n="src_gallery">Galéria</h2><p class="source-sub">Two dogs · demo gallery</p>
+            <div class="meta">
+              <div class="meta-row"><strong data-i18n="src_photographer">Fotós</strong><span>Alvan Nee</span></div>
+              <div class="meta-row"><strong data-i18n="src_source">Forrás</strong><span>Unsplash</span></div>
+              <div class="meta-row"><strong data-i18n="src_image_id">Képazonosító</strong><span>photo-1548199973-03cce0bbc87b</span></div>
+              <div class="meta-row"><strong data-i18n="src_usage">Felhasználás</strong><span data-i18n="src_gallery_use">Tu Peluquería Canina galéria</span></div>
+              <div class="meta-row"><strong data-i18n="src_license">Licenc</strong><a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a></div>
+              <div class="meta-row"><strong data-i18n="src_direct">Közvetlen kép</strong><a href="https://images.unsplash.com/photo-1548199973-03cce0bbc87b" target="_blank" rel="noopener noreferrer">images.unsplash.com →</a></div>
+            </div>
+            <div class="actions"><a class="btn btn-primary" href="https://unsplash.com/s/photos/two-dogs" target="_blank" rel="noopener noreferrer"><span data-i18n="src_unsplash_btn">Unsplash forrás →</span></a></div>
+          </div>
+        </article>
+
+        <article class="source-card">
+          <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1400&q=88" alt="Kutya – utána kép">
+          <div class="source-body"><span class="source-number">06</span><h2 data-i18n="src_card6_title">Utána</h2><p class="source-sub">Dog portrait · before/after section</p>
+            <div class="meta">
+              <div class="meta-row"><strong data-i18n="src_source">Forrás</strong><span>Unsplash</span></div>
+              <div class="meta-row"><strong data-i18n="src_image_id">Képazonosító</strong><span>photo-1558788353-f76d92427f16</span></div>
+              <div class="meta-row"><strong data-i18n="src_usage">Felhasználás</strong><span data-i18n="src_card6_use">„Utána” kép az előtte/utána szekcióban</span></div>
+              <div class="meta-row"><strong data-i18n="src_license">Licenc</strong><a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a></div>
+              <div class="meta-row"><strong data-i18n="src_direct">Közvetlen kép</strong><a href="https://images.unsplash.com/photo-1558788353-f76d92427f16" target="_blank" rel="noopener noreferrer">images.unsplash.com →</a></div>
+            </div>
+            <div class="actions"><a class="btn btn-primary" href="https://unsplash.com/s/photos/dog-grooming" target="_blank" rel="noopener noreferrer"><span data-i18n="src_unsplash_btn">Unsplash forrás →</span></a></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="note">
+        <strong data-i18n="src_note_title">Megjegyzés</strong>
+        <p data-i18n="src_note_text">A lista a jelenlegi főoldalon használt összes egyedi Unsplash képet lefedi. A főoldal galériája is ezeket a közvetlen Unsplash URL-eket használja. Az ismételten használt kép csak egyszer szerepel a forráslistában, a „Felhasználás” sor pedig jelzi, mely szekciókban jelenik meg.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© 2026 Tu Peluquería Canina · Demo · MesterWeb</span>
+      <span data-i18n="src_footer">Unsplash képforrások</span>
+    </div>
+  </footer>
+
+<script>
+(() => {
+  const supported=["hu","en","es"];
+  const getStored=()=>{try{return localStorage.getItem("grooming-demo-language")}catch(e){return null}};
+  const setStored=v=>{try{localStorage.setItem("grooming-demo-language",v)}catch(e){}};
+  let lang=supported.includes(getStored())?getStored():"es";
+  async function load(code){
+    try{
+      const r=await fetch(`lang/${code}.json`,{cache:"no-cache"});
+      if(!r.ok) throw new Error(`HTTP ${r.status}`);
+      return await r.json();
+    }catch(err){console.error("Language file error:",err);return {}}
+  }
+  async function apply(code){
+    if(!supported.includes(code)) return;
+    lang=code; setStored(code);
+    const d=await load(code);
+    document.documentElement.lang=code;
+    document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(Object.prototype.hasOwnProperty.call(d,k)) el.textContent=d[k]});
+    document.querySelectorAll("[data-lang]").forEach(btn=>{const active=btn.dataset.lang===code;btn.classList.toggle("active",active);btn.setAttribute("aria-pressed",active?"true":"false")});
+    document.title = code==="en" ? "Tu Peluquería Canina – Image credits" : code==="es" ? "Tu Peluquería Canina – Fuentes de imágenes" : "Tu Peluquería Canina – Képforrások";
+  }
+  document.addEventListener("DOMContentLoaded",()=>{
+    document.querySelectorAll("[data-lang]").forEach(btn=>btn.addEventListener("click",()=>apply(btn.dataset.lang)));
+    apply(lang);
+  });
+})();
+</script>
+</body>
+</html>
